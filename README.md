@@ -53,6 +53,12 @@ function throttle(func, ms) {
   return wrapper; 
 }
 ```
+
+Regular Expression
+```js
+  res = '1?2&3/4/5'.split(/\?|&|[/]/);
+  (5) ["1", "2", "3", "4", "5"]
+```
 ## Available Scripts
 
 In the project directory, you can run:
