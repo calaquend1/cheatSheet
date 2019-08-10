@@ -112,6 +112,36 @@ return sieve;
 
 primes = sieveOfAtkin(5000);
 ```
+Про Промисы (+статья в этом репозитории)
+```js
+function f1() {
+  return Promise.resolve(12).then(() => {return 'f1'});
+}
+function f2() {
+  return Promise.resolve(13).then(() => {return 'f2'});
+}
+function f3() {
+  return Promise.resolve(14).then(() => {return 'f3'});
+}
+f = [f1(),f2(),f3()]
+function executeSequentially(f) {
+  var x = []
+  var result = Promise.resolve();
+  f.forEach(function (promiseFactory) {
+    result = result.then(promiseFactory());
+    x.push(result)
+  });
+console.log(x)
+return result;
+}
+```
+
+1. если есть return - в then будет значение функции
+2. если return - то выполнение начинается после resolve
+3. если function (e) {} или e => {} - то в функции будет значение, если оно передано return, иначе undefined
+4. если нет return - then функции 3 начинает работать сразу же после функции 1
+5. если .then(do1()) - то функция начинает работать одновременно с предыдущей и возвращает результат
+6. если .then(do2) - то функция начинает работать после и получает результат
 ## Available Scripts
 
 In the project directory, you can run:
