@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.
 ```js 
 function find_optimized(task) { 
   var results=[] 
@@ -9,16 +9,16 @@ function find_optimized(task) {
       results.push([task.ar[i]]) 
     } else // Если поиск небесполезен - попробуем поискать, начиная с текущего элемента 
       if((task.ar.length-1>i)&&(task.sum>task.ar[i])) { 
-      // Рекурсия с новой (меньшей) суммой и входным массивом с выколотым текущим элементом. 
+        // Рекурсия с новой (меньшей) суммой и входным массивом с выколотым текущим элементом. 
         sub_array=find_optimized( {prev: task.ar[i], sum: task.sum-task.ar[i], ar: task.ar.slice(i*1+1)}); 
         // Складываем в тот же плоский массив результаты поиска 
-  for(i in sub_array[1]){ 
-    results.push([sub_array[0]].concat(sub_array[1][i])); 
+      for(i in sub_array[1]){ 
+        results.push([sub_array[0]].concat(sub_array[1][i])); 
+      } 
+    }
   } 
-}} 
 // Если не на вершине стека - вернём предыдущий элемент цепочки. Если что-то нашли - вернём ещё и массив результатов. 
-return ((results.length==0) ? task.prev:(task.prev==undefined ? results:[task.prev, results])); 
-
+  return ((results.length==0) ? task.prev:(task.prev==undefined ? results:[task.prev, results])); 
 } 
 
 console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
