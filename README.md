@@ -23,7 +23,7 @@ function find_optimized(task) {
 
 console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
 ```
-
+Throttle function: не даёт запускать функцию чаще, чем нужно.
 ```js
 function throttle(func, ms) { 
   var isThrottled = false, 
