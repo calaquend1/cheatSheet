@@ -181,6 +181,17 @@ function foo(s, l, r, pairs){
 
 foo('', 0, 0, 3)
 ```
+
+```js
+Promise.resolve(1)
+.then(x => x + 1) // возвращает 2
+.then(x => { throw x }) // выкидывает 2 в следующий catch
+.then(x => console.log(x)) // ничего не делает
+.catch(err => console.log(err)) // выводит 2
+.then(x => Promise.resolve(1)) // возвращает 1
+.catch(err => console.log(err)) // ничего не выводит
+.then(x => console.log(x)) // выводит 1
+```
 ## Available Scripts
 
 In the project directory, you can run:
