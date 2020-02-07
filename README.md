@@ -142,6 +142,27 @@ return result;
 4. если нет return - then функции 3 начинает работать сразу же после функции 1
 5. если .then(do1()) - то функция начинает работать одновременно с предыдущей и возвращает результат
 6. если .then(do2) - то функция начинает работать после и получает результат
+
+
+```
+function makeCounter(number) {
+  let count = 0;
+
+  return function() {
+    count++
+    return number - count + 1 > 0 ? 'yes' : 'no'; // есть доступ к внешней переменной "count"
+  };
+}
+
+const count = makeCounter(3)
+
+count() // "yes"
+count() // "yes"
+count() // "yes"
+
+count() // "no"
+
+```
 ## Available Scripts
 
 In the project directory, you can run:
@@ -149,15 +170,7 @@ In the project directory, you can run:
 ### `npm start`
 
 
-### `npm test`
 
-
-
-### `npm run build`
-
-
-
-### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
