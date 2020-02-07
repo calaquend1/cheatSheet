@@ -144,7 +144,7 @@ return result;
 6. если .then(do2) - то функция начинает работать после и получает результат
 
 
-```
+```js
 function makeCounter(number) {
   let count = 0;
 
@@ -162,6 +162,24 @@ count() // "yes"
 
 count() // "no"
 
+```
+выводит все правильные комбинации скобок
+```js
+function foo(s, l, r, pairs){
+  if (l === pairs && r === pairs){
+  console.log(s)
+  } else {
+    if (l<pairs){
+      foo(s + '(', l + 1, r, pairs)
+    }
+    if (r < l){
+      foo(s + ')', l, r + 1, pairs)
+    }
+  }
+}
+
+
+foo('', 0, 0, 3)
 ```
 ## Available Scripts
 
