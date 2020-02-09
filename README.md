@@ -245,6 +245,25 @@ console.log(d(second));
 console.log(d(third));
 можно ещё запятые убрать в конце
 ```
+
+```js
+"use strict";
+function objectFlip(obj) {
+  const ret = {};
+  Object.keys(obj).forEach(key => {
+    ret[obj[key]] = key;
+  });
+  return ret;
+}
+
+const x = {a: '', b: {}, c: () => {}, d: []}
+
+console.log(objectFlip(x));
+console.log(objectFlip(x)[''],' - обращаемся к пустой строке') // d
+console.log(objectFlip(x)[{}],' - обращаемся к пустому объекту') // b
+console.log(objectFlip(x)[() => {}],' - обращаемся к функции') // c
+console.log(objectFlip(x)[[]],' - обращаемся к пустому массиву') // d, если убрать d: [], то обращение к пустому массиву вернёт a
+```
 ## Available Scripts
 
 In the project directory, you can run:
