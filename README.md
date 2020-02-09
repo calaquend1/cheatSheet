@@ -192,6 +192,59 @@ Promise.resolve(1)
 .catch(err => console.log(err)) // ничего не выводит
 .then(x => console.log(x)) // выводит 1
 ```
+
+```js
+const first = [1, 4, 5, 2, 3, 9, 8, 11, 14, 0, 13, 40, -1]; // "0-5,8-9,11"
+const second = [1, 4, 3, 2]; // "1-4"
+const third = [1, 4]; // "1,4"
+
+const d = array => {
+  const arr = [...new Set(array)].sort((a, b) => a - b);
+  let begin;
+  let end;
+  let diap = "";
+  arr.forEach((item, id) => {
+    if (id === 0) {
+      begin = item; // записываем начало
+      end = item; // записываем конец
+      if (item !== arr[id + 1] - 1) {
+        diap += `${item},`; // иначе записываем одно число
+      }
+    } else if (item === end + 1) {
+      end = item; // продолжаем промежуток
+      if (arr.length === id + 1) {
+        if (begin !== end) {
+          // если между началом и концом есть промежуток
+          diap += `${begin}-${end},`;
+        } else {
+          diap += `${item}`; // иначе записываем одно число
+        }
+      }
+    } else if (begin !== end) {
+      // если между началом и концом есть промежуток
+      diap += `${begin}-${end},`;
+      if (arr.length === id + 1) {
+        diap += `${item}`; // иначе записываем одно число
+      } else if (item !== arr[id + 1] - 1) {
+        diap += `${item},`;
+      } // составляем промежуток
+      begin = item;
+      end = item;
+    } else {
+      if (arr.length === id + 1) {
+        diap += `${item}`; // иначе записываем одно число
+      }
+      begin = item;
+      end = item;
+    }
+  });
+  return diap;
+};
+console.log(d(first));
+console.log(d(second));
+console.log(d(third));
+можно ещё запятые убрать в конце
+```
 ## Available Scripts
 
 In the project directory, you can run:
