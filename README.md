@@ -134,6 +134,33 @@ function executeSequentially(f) {
 console.log(x)
 return result;
 }
+
+норм вариант
+
+async function f1() {
+  await Promise.resolve(12);
+  return "f1";
+}
+async function f2() {
+  await Promise.resolve(13);
+  return "f2";
+}
+async function f3() {
+  await Promise.resolve(14);
+  return "f3";
+}
+f = [f1, f2, f3];
+function executeSequentially(f) {
+  var x = [];
+  var result = Promise.resolve();
+  f.forEach(function(promiseFactory) {
+    result = result.then(promiseFactory);
+    x.push(result);
+  });
+  return x;
+}
+
+executeSequentially(f).forEach(res => res.then(res2 => console.log(res2,'3')))
 ```
 
 1. если есть return - в then будет значение функции
