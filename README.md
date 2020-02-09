@@ -143,7 +143,7 @@ return result;
 5. если .then(do1()) - то функция начинает работать одновременно с предыдущей и возвращает результат
 6. если .then(do2) - то функция начинает работать после и получает результат
 
-
+задача на замыкания
 ```js
 function makeCounter(number) {
   let count = 0;
@@ -181,7 +181,7 @@ function foo(s, l, r, pairs){
 
 foo('', 0, 0, 3)
 ```
-
+промисы
 ```js
 Promise.resolve(1)
 .then(x => x + 1) // возвращает 2
@@ -192,7 +192,7 @@ Promise.resolve(1)
 .catch(err => console.log(err)) // ничего не выводит
 .then(x => console.log(x)) // выводит 1
 ```
-
+составляем из массива строку с промежутками и значенями внутри массива
 ```js
 const first = [1, 4, 5, 2, 3, 9, 8, 11, 14, 0, 13, 40, -1]; // "0-5,8-9,11"
 const second = [1, 4, 3, 2]; // "1-4"
@@ -245,7 +245,7 @@ console.log(d(second));
 console.log(d(third));
 можно ещё запятые убрать в конце
 ```
-
+меняем местами ключи и значения в объекте
 ```js
 "use strict";
 function objectFlip(obj) {
