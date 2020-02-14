@@ -291,6 +291,55 @@ console.log(objectFlip(x)[{}],' - обращаемся к пустому объ�
 console.log(objectFlip(x)[() => {}],' - обращаемся к функции') // c
 console.log(objectFlip(x)[[]],' - обращаемся к пустому массиву') // d, если убрать d: [], то обращение к пустому массиву вернёт a
 ```
+Given an array where elements are sorted in ascending order,
+convert it to a height balanced BST.
++search, is element in bst
+```js
+class TreeNode {
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+let myNode = new TreeNode(8);
+console.log(myNode, "myNode"); //  { val: 8, left: null, right: null }
+
+var sortedArrayToBST = function(nums) {
+  //base cases
+  if (nums.length === 1) return new TreeNode(nums[0]);
+  if (nums.length === 0) return null;
+
+  //create a new TreeNode(center)
+  let centerIdx = Math.floor(nums.length / 2);
+  let root = new TreeNode(nums[centerIdx]);
+
+  //set left node to center of left subtree
+  let leftSubtree = nums.slice(0, centerIdx);
+  root.left = sortedArrayToBST(leftSubtree);
+
+  //set right node to center of right subtree
+  let rightSubtree = nums.slice(centerIdx + 1, nums.length);
+  root.right = sortedArrayToBST(rightSubtree);
+
+  return root;
+};
+
+const x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+const search = (node, number) => {
+  if (!node) return null;
+  if (number !== 0 && !number) return null;
+  if (node.val === number) return `${number} is here`;
+  if (node.val > number) return search(node.left, number);
+  if (node.val < number) return search(node.right, number);
+};
+
+console.log(sortedArrayToBST(x));
+//T O(log n) S O(n) recursion stack space
+console.log(search(sortedArrayToBST(x), 11));
+
+```
 ## Available Scripts
 
 In the project directory, you can run:
