@@ -340,16 +340,29 @@ console.log(sortedArrayToBST(x));
 console.log(search(sortedArrayToBST(x), 11));
 
 ```
-## Available Scripts
+```js
+function sum(n) {
+    let res = n;
 
-In the project directory, you can run:
+    function sum1(n) {
+        res += n;
+        return sum1;
+    }
 
-### `npm start`
+    sum1.toString = sum1.valueOf = function () {
+        return res;
+    }
 
+    return sum1;
+}
 
+const a = sum(1);
+a(2);
 
+console.log(0 + a); // 3
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
+a(-3);
+console.log(0 + a); // 0
+```
 
 
