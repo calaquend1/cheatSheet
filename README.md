@@ -398,34 +398,33 @@ for (const username of getUsernames(string)) {
 }
 
 ```
-<details><summary><b>###### 13. Использование генераторов для заполнения массива в приложении</b></summary>
-<p>
+<details>
+ <summary><b>13. Использование генераторов для заполнения массива в приложении</b></summary>
  
-function* repeatedArray(arr) {
-  let index = 0;
-  while (true) {
-    yield arr[index++ % arr.length];
-  }
-}
+ ```js
+        function* repeatedArray(arr) {
+          let index = 0;
+          while (true) {
+            yield arr[index++ % arr.length];
+          }
+        }
+  
+        const lifts = ['squat', 'bench', 'deadlift', 'press'];
+        
+        const nextLiftGenerator = repeatedArray(lifts);
+        const numWeeks = 3;
+        const daysPerWeek = 6;
+        const totalNumSessions = numWeeks * daysPerWeek;
+        
+        // This creates an empty array of totalNumSessions length
+        // for me to map over
+        
+        const cycle = [...Array(totalNumSessions)].map(() => ({
+          lift: nextLiftGenerator.next().value,
+        }));
+ ```
 
-const lifts = ['squat', 'bench', 'deadlift', 'press'];
-const nextLiftGenerator = repeatedArray(lifts);
-
-const numWeeks = 3;
-const daysPerWeek = 6;
-
-const totalNumSessions = numWeeks * daysPerWeek;
-
-// This creates an empty array of totalNumSessions length
-// for me to map over
-const cycle = [...Array(totalNumSessions)].map(() => ({
-  lift: nextLiftGenerator.next().value,
-}));
-
-</p>
 </details>
-
-
 
 # Test example
 
