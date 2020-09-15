@@ -1,4 +1,4 @@
-Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.
+###### 1. Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.
 ```js 
 function find_optimized(task) { 
   var results=[] 
@@ -23,7 +23,8 @@ function find_optimized(task) {
 
 console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
 ```
-Throttle function: не даёт запускать функцию чаще, чем нужно.
+
+###### 2. Throttle function: не даёт запускать функцию чаще, чем нужно.
 ```js
 function throttle(func, ms) { 
   var isThrottled = false, 
@@ -53,14 +54,13 @@ function throttle(func, ms) {
   return wrapper; 
 }
 ```
+###### 3. regexp для разделения строк
 
-Regular Expression
 ```js
   res = '1?2&3/4/5'.split(/\?|&|[/]/);
   (5) ["1", "2", "3", "4", "5"]
 ```
-Решето Аткина, простые числа
-
+###### 4. Реализация решета Аткина
 ```js
 function sieveOfAtkin(limit){
   var limitSqrt = Math.sqrt(limit);
@@ -112,8 +112,18 @@ return sieve;
 
 primes = sieveOfAtkin(5000);
 ```
-Про Промисы (+статья в этом репозитории)
+###### 5. Промисы
 ```js
+
+Promise.resolve(1)
+.then(x => x + 1) // возвращает 2
+.then(x => { throw x }) // выкидывает 2 в следующий catch
+.then(x => console.log(x)) // ничего не делает
+.catch(err => console.log(err)) // выводит 2
+.then(x => Promise.resolve(1)) // возвращает 1
+.catch(err => console.log(err)) // ничего не выводит
+.then(x => console.log(x)) // выводит 1
+
 function f1() {
   return Promise.resolve(12).then(() => {return 'f1'});
 }
@@ -162,7 +172,6 @@ function executeSequentially(f) {
 
 executeSequentially(f).forEach(res => res.then(res2 => console.log(res2,'3')))
 ```
-
 1. если есть return - в then будет значение функции
 2. если return - то выполнение начинается после resolve
 3. если function (e) {} или e => {} - то в функции будет значение, если оно передано return, иначе undefined
@@ -170,7 +179,8 @@ executeSequentially(f).forEach(res => res.then(res2 => console.log(res2,'3')))
 5. если .then(do1()) - то функция начинает работать одновременно с предыдущей и возвращает результат
 6. если .then(do2) - то функция начинает работать после и получает результат
 
-задача на замыкания
+###### 6. Замыкания 
+тут нужно добавить реализацию через итераторы
 ```js
 function makeCounter(number) {
   let count = 0;
@@ -190,7 +200,7 @@ count() // "yes"
 count() // "no"
 
 ```
-выводит все правильные комбинации скобок
+###### 7. Выводит все правильные комбинации скобок 
 ```js
 function foo(s, l, r, pairs){
   if (l === pairs && r === pairs){
@@ -208,18 +218,7 @@ function foo(s, l, r, pairs){
 
 foo('', 0, 0, 3)
 ```
-промисы
-```js
-Promise.resolve(1)
-.then(x => x + 1) // возвращает 2
-.then(x => { throw x }) // выкидывает 2 в следующий catch
-.then(x => console.log(x)) // ничего не делает
-.catch(err => console.log(err)) // выводит 2
-.then(x => Promise.resolve(1)) // возвращает 1
-.catch(err => console.log(err)) // ничего не выводит
-.then(x => console.log(x)) // выводит 1
-```
-составляем из массива строку с промежутками и значенями внутри массива
+###### 8. Составляем из массива строку с промежутками и значенями внутри массива
 ```js
 const first = [1, 4, 5, 2, 3, 9, 8, 11, 14, 0, 13, 40, -1]; // "0-5,8-9,11"
 const second = [1, 4, 3, 2]; // "1-4"
@@ -272,7 +271,7 @@ console.log(d(second));
 console.log(d(third));
 можно ещё запятые убрать в конце
 ```
-меняем местами ключи и значения в объекте
+###### 9. Меняем местами ключи и значения в объекте
 ```js
 "use strict";
 function objectFlip(obj) {
@@ -291,9 +290,7 @@ console.log(objectFlip(x)[{}],' - обращаемся к пустому объ�
 console.log(objectFlip(x)[() => {}],' - обращаемся к функции') // c
 console.log(objectFlip(x)[[]],' - обращаемся к пустому массиву') // d, если убрать d: [], то обращение к пустому массиву вернёт a
 ```
-Given an array where elements are sorted in ascending order,
-convert it to a height balanced BST.
-+search, is element in bst
+###### 10. Given an array where elements are sorted in ascending order, convert it to a height balanced BST. +search, is element in bst
 ```js
 class TreeNode {
   constructor(val) {
@@ -340,6 +337,8 @@ console.log(sortedArrayToBST(x));
 console.log(search(sortedArrayToBST(x), 11));
 
 ```
+
+###### 11. ???
 ```js
 function sum(n) {
     let res = n;
@@ -363,19 +362,6 @@ console.log(0 + a); // 3
 
 a(-3);
 console.log(0 + a); // 0
-```
-
-###### 1. What's the output?
-
-```javascript
-function sayHi() {
-  console.log(name);
-  console.log(age);
-  var name = 'Lydia';
-  let age = 21;
-}
-
-sayHi();
 ```
 
 - A: `Lydia` and `undefined`
