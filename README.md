@@ -400,7 +400,7 @@ for (const username of getUsernames(string)) {
 ```
 <details><summary><b>###### 13. Использование генераторов для заполнения массива в приложении</b></summary>
 <p>
-  ```js
+ 
 function* repeatedArray(arr) {
   let index = 0;
   while (true) {
@@ -421,7 +421,7 @@ const totalNumSessions = numWeeks * daysPerWeek;
 const cycle = [...Array(totalNumSessions)].map(() => ({
   lift: nextLiftGenerator.next().value,
 }));
-```
+
 </p>
 </details>
 
