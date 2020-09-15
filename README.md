@@ -179,8 +179,7 @@ executeSequentially(f).forEach(res => res.then(res2 => console.log(res2,'3')))
 5. если .then(do1()) - то функция начинает работать одновременно с предыдущей и возвращает результат
 6. если .then(do2) - то функция начинает работать после и получает результат
 
-###### 6. Замыкания 
-тут нужно добавить реализацию через итераторы
+###### 6. Замыкания и итераторы, реализация одной и той же задачи
 ```js
 function makeCounter(number) {
   let count = 0;
@@ -199,6 +198,21 @@ count() // "yes"
 
 count() // "no"
 
+function* countIterator(number) {
+    for (let i = 0; i < number; i++) {
+      yield 'yes'
+    }
+    while(true) {
+      yield 'no'
+    }
+}
+
+const count = countIterator(3)
+count.next().value // "yes"
+count.next().value // "yes"
+count.next().value // "yes"
+count.next().value // "no"
+...
 ```
 ###### 7. Выводит все правильные комбинации скобок 
 ```js
@@ -338,7 +352,7 @@ console.log(search(sortedArrayToBST(x), 11));
 
 ```
 
-###### 11. ???
+###### 11. Какая-то задача со строками
 ```js
 function sum(n) {
     let res = n;
@@ -363,6 +377,8 @@ console.log(0 + a); // 3
 a(-3);
 console.log(0 + a); // 0
 ```
+
+#### Test example
 
 - A: `Lydia` and `undefined`
 - B: `Lydia` and `ReferenceError`
