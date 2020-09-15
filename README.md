@@ -378,7 +378,7 @@ a(-3);
 console.log(0 + a); // 0
 ```
 
-###### 12. Использование итераторов для поиска в строке
+###### 12. Использование генераторов для поиска в строке
 ```js
 const UserRegex = new RegExp(/@(\w+)/, "g");
 
@@ -400,7 +400,7 @@ for (const username of getUsernames(string)) {
 ```
 
 
-#### Test example
+# Test example
 
 - A: `Lydia` and `undefined`
 - B: `Lydia` and `ReferenceError`
