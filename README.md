@@ -426,6 +426,37 @@ for (const username of getUsernames(string)) {
 
 </details>
 
+<details>
+ <summary><b>14. This example features an asynchronous implementation of the print function for simulating a human typing a phrase.</b></summary>
+ 
+ ```js
+function* type (string) {
+  let index = 0;
+  
+  while (index < string.length) {
+    yield string.slice(0, ++index);
+  }
+  
+  return string;
+}
+
+const print = (render, text, timeout) => {
+  render(text);
+  
+  return new Promise(resolve => {
+    setTimeout(resolve, timeout);
+  });
+};
+
+(async function () {
+  for (const value of type("Hello, World!")) {
+    await print(console.log, value, 250);
+  }
+})();
+ ```
+
+</details>
+
 # Test example
 
 - A: `Lydia` and `undefined`
