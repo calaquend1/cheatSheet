@@ -378,6 +378,28 @@ a(-3);
 console.log(0 + a); // 0
 ```
 
+###### 12. Использование итераторов для поиска в строке
+```js
+const UserRegex = new RegExp(/@(\w+)/, "g");
+
+function* getUsernames(string) {
+    let match = null;
+    do {
+        match = UserRegex.exec(string);
+        if (match) {
+            yield match;
+        }
+    } while (match);
+}
+
+const string = "this is a test with @swizec and @kyleshevlin, maybe @lukeed05"
+for (const username of getUsernames(string)) {
+  console.log(username)
+}
+
+```
+
+
 #### Test example
 
 - A: `Lydia` and `undefined`
