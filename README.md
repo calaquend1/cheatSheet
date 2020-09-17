@@ -521,3 +521,80 @@ function* fib (n) {
  ```
 
 </details>
+
+<details>
+ <summary><b>16. Ещё генераторы.</b></summary>
+ 
+ ```js
+const [...x] = (function* generator(n){ 
+ let i = 0; 
+ while(i<=n){ 
+  yield i++
+ } 
+ return n
+})(8);
+```
+
+```js
+const a = [1, 2, 3];
+const b = [4, 5, 6];
+
+function* c () {
+  yield 7;
+  yield 8;
+  yield 9;
+}
+
+function* gen () {
+  yield* a;
+  yield* b;
+  yield* c();
+  yield 10;
+}
+
+const [...sequence] = gen();
+console.log(sequence); // [1,2,3,4,5,6,7,8,9,10]
+```
+
+```js
+const sqrt = Math.sqrt;
+const pow = Math.pow;
+
+const fibCalc = n => Math.round(
+  (1 / sqrt(5)) *
+  (
+    pow(((1 + sqrt(5)) / 2), n) -
+    pow(((1 - sqrt(5)) / 2), n)
+  )
+);
+
+function* fib (n) {
+  const isInfinite = n === undefined;
+  let current = 0;
+
+  while (isInfinite || n--) {
+    yield fibCalc(current);
+    current++;
+  }
+}
+ ```
+ ```js
+ const countToThree = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+
+countToThree[Symbol.iterator] = function* () {
+  const keys = Object.keys(this);
+  const length = keys.length;
+
+  for (const key in this) {
+    yield this[key];
+  }
+};
+
+let [...three] = countToThree;
+console.log(three); // [ 1, 2, 3 ]
+ ```
+ </details>
