@@ -1,4 +1,7 @@
-###### 1. Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.
+
+<details>
+ <summary><b>1. Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.</b></summary>
+  
 ```js 
 function find_optimized(task) { 
   var results=[] 
@@ -23,8 +26,11 @@ function find_optimized(task) {
 
 console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
 ```
+</details>
 
-###### 2. Throttle function: не даёт запускать функцию чаще, чем нужно.
+<details>
+ <summary><b>2. Throttle function: не даёт запускать функцию чаще, чем нужно.</b></summary>
+
 ```js
 function throttle(func, ms) { 
   var isThrottled = false, 
@@ -54,13 +60,21 @@ function throttle(func, ms) {
   return wrapper; 
 }
 ```
-###### 3. regexp для разделения строк
+</details>
+
+<details>
+ <summary><b>3. regexp для разделения строк</b></summary>
+
 
 ```js
   res = '1?2&3/4/5'.split(/\?|&|[/]/);
   (5) ["1", "2", "3", "4", "5"]
 ```
-###### 4. Реализация решета Аткина
+</details>
+
+<details>
+ <summary><b>4. Реализация решета Аткина</b></summary>
+
 ```js
 function sieveOfAtkin(limit){
   var limitSqrt = Math.sqrt(limit);
@@ -112,7 +126,11 @@ return sieve;
 
 primes = sieveOfAtkin(5000);
 ```
-###### 5. Промисы
+</details>
+
+<details>
+ <summary><b>5. Промисы</b></summary>
+  
 ```js
 
 Promise.resolve(1)
@@ -179,7 +197,11 @@ executeSequentially(f).forEach(res => res.then(res2 => console.log(res2,'3')))
 5. если .then(do1()) - то функция начинает работать одновременно с предыдущей и возвращает результат
 6. если .then(do2) - то функция начинает работать после и получает результат
 
-###### 6. Замыкания и итераторы, реализация одной и той же задачи
+</details>
+
+<details>
+ <summary><b>6. Замыкания и итераторы, реализация одной и той же задачи</b></summary>
+
 ```js
 function makeCounter(number) {
   let count = 0;
@@ -214,7 +236,11 @@ count.next().value // "yes"
 count.next().value // "no"
 ...
 ```
-###### 7. Выводит все правильные комбинации скобок 
+</details>
+
+<details>
+ <summary><b>7. Выводит все правильные комбинации скобок </b></summary>
+
 ```js
 function foo(s, l, r, pairs){
   if (l === pairs && r === pairs){
@@ -232,7 +258,11 @@ function foo(s, l, r, pairs){
 
 foo('', 0, 0, 3)
 ```
-###### 8. Составляем из массива строку с промежутками и значенями внутри массива
+</details>
+
+<details>
+ <summary><b>8. Составляем из массива строку с промежутками и значенями внутри массива</b></summary>
+
 ```js
 const first = [1, 4, 5, 2, 3, 9, 8, 11, 14, 0, 13, 40, -1]; // "0-5,8-9,11"
 const second = [1, 4, 3, 2]; // "1-4"
@@ -285,7 +315,11 @@ console.log(d(second));
 console.log(d(third));
 можно ещё запятые убрать в конце
 ```
-###### 9. Меняем местами ключи и значения в объекте
+</details>
+
+<details>
+ <summary><b>9. Меняем местами ключи и значения в объекте</b></summary>
+
 ```js
 "use strict";
 function objectFlip(obj) {
@@ -304,7 +338,11 @@ console.log(objectFlip(x)[{}],' - обращаемся к пустому объ�
 console.log(objectFlip(x)[() => {}],' - обращаемся к функции') // c
 console.log(objectFlip(x)[[]],' - обращаемся к пустому массиву') // d, если убрать d: [], то обращение к пустому массиву вернёт a
 ```
-###### 10. Given an array where elements are sorted in ascending order, convert it to a height balanced BST. +search, is element in bst
+</details>
+
+<details>
+ <summary><b>10. Given an array where elements are sorted in ascending order, convert it to a height balanced BST. +search, is element in bst</b></summary>
+
 ```js
 class TreeNode {
   constructor(val) {
@@ -351,8 +389,11 @@ console.log(sortedArrayToBST(x));
 console.log(search(sortedArrayToBST(x), 11));
 
 ```
+</details>
 
-###### 11. Какая-то задача со строками
+<details>
+ <summary><b>11. Какая-то задача со строками</b></summary>
+
 ```js
 function sum(n) {
     let res = n;
@@ -377,8 +418,11 @@ console.log(0 + a); // 3
 a(-3);
 console.log(0 + a); // 0
 ```
+</details>
 
-###### 12. Использование генераторов для поиска в строке
+<details>
+ <summary><b>12. Использование генераторов для поиска в строке</b></summary>
+
 ```js
 const UserRegex = new RegExp(/@(\w+)/, "g");
 
@@ -398,6 +442,8 @@ for (const username of getUsernames(string)) {
 }
 
 ```
+
+</details>
 <details>
  <summary><b>13. Использование генераторов для заполнения массива в приложении</b></summary>
  
@@ -456,24 +502,3 @@ const print = (render, text, timeout) => {
  ```
 
 </details>
-
-# Test example
-
-- A: `Lydia` and `undefined`
-- B: `Lydia` and `ReferenceError`
-- C: `ReferenceError` and `21`
-- D: `undefined` and `ReferenceError`
-
-<details><summary><b>Answer</b></summary>
-<p>
-
-#### Answer: D
-
-Within the function, we first declare the `name` variable with the `var` keyword. This means that the variable gets hoisted (memory space is set up during the creation phase) with the default value of `undefined`, until we actually get to the line where we define the variable. We haven't defined the variable yet on the line where we try to log the `name` variable, so it still holds the value of `undefined`.
-
-Variables with the `let` keyword (and `const`) are hoisted, but unlike `var`, don't get <i>initialized</i>. They are not accessible before the line we declare (initialize) them. This is called the "temporal dead zone". When we try to access the variables before they are declared, JavaScript throws a `ReferenceError`.
-
-</p>
-</details>
-
----
