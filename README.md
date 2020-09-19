@@ -699,11 +699,8 @@ let findShortestPath = (graph, startNode, endNode) => {
 };
 
 console.log(findShortestPath(graph, "start", "end"));
-
 console.log(findShortestPath(graph, "A", "B"));
-
 console.log(findShortestPath(graph, "A", "start"));
 
 ```
-
 </details>
