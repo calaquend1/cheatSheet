@@ -824,3 +824,83 @@ alternateBreadthFirstSearch(tree, tree[17], "18")
 
 ```
 </details>
+
+<details>
+	<summary><b>19. Typescript features.</b></summary>
+	
+```js
+
+1.
+interface IDog{
+   name:  string;
+   age: number;
+   kidFriendly: boolean;
+}
+
+interface ICat{
+   name: string;
+   age: number;
+   activityLevel: number;
+}
+
+type Animal = IDog | ICat;
+
+/** Is the animal a dog ? */
+const isDog = (animal: Animal) : animal is IDog => (animal as IDog).kidFriendly !== undefined;
+
+
+const kitty: ICat = {
+    name:  'string',
+    age: 2,
+    activityLevel: 4
+}
+
+const woof: IDog = {
+    name:  'string',
+    age: 2,
+    kidFriendly: true
+}
+if(isDog(kitty)){
+   console.log(kitty.kidFriendly);
+}
+if(isDog(woof)){
+   console.log(woof.kidFriendly);
+}
+console.log(isDog(kitty), isDog(woof))
+
+2. 
+interface IDog{
+   name: string;
+   age: number;
+   kidFriendly: boolean;
+}
+
+const dog : Partial<IDog> = {
+   name: "Rex"
+}
+
+3.
+const walkDog = (dogName: string, distance: number) => { /** ... */ }
+
+const params: Parameters<typeof walkDog> = ["Rex", 48]; // you can't do [3, '24']
+
+4.
+class Dog{
+   private _name: string = "";
+
+   get name(): string{
+      return this._name;
+   }
+
+   /** Check the length of the name before setting it **/
+   set name(newName: string){
+      if(newName.length < 8) {
+         throw new Error(`The dog's name needs at least 8 charachters`)
+      }
+
+      this._name = newName;
+   }
+}
+
+```
+</details>
