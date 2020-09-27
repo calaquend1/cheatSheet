@@ -904,3 +904,51 @@ class Dog{
 
 ```
 </details>
+
+<details>
+	<summary><b>20. abc.curry, задача на собеседование.</b></summary>
+	
+```js
+
+function abc(a, b, c) {
+  return a + b + c;
+}
+
+function abcdef(a, b, c, d, e, f) {
+  return a + b + c + d + e + f;
+}
+
+abc.curry = abcdef.curry = function abc(...args) {
+    let res = [...args].join('');
+
+    function curry(...args) {
+        res += [...args].join('');
+        return curry;
+    }
+
+    curry.toString = curry.valueOf = function () {
+        return res;
+    }
+    return curry;
+}
+
+
+console.log(abc.curry('A','B','C'))
+console.log(abc.curry('A','B','C')('D'))
+console.log(abc.curry('A')('B')('C')); // 'ABC'
+console.log(abc.curry('A', 'B')('C')); // 'ABC'
+console.log(abc.curry('A', 'B', 'C')); // 'ABC'
+
+console.log(abcdef.curry('A')('B')('C')('D')('E')('F')); // 'ABCDEF'
+console.log(abcdef.curry('A', 'B', 'C')('D', 'E', 'F')); // 'ABCDEF'
+```
+
+</details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
