@@ -946,6 +946,68 @@ console.log(abcdef.curry('A', 'B', 'C')('D', 'E', 'F')); // 'ABCDEF'
 </details>
 
 <details>
+	<summary><b>21. Мемоизация</b></summary>
+	
+```js
+	
+function memoize(fn) {
+  let isCalculated = false;
+  let lastResult;
+  return function memoizedFn() { // Return the generated function!
+    if (isCalculated) {
+      return lastResult;
+    }
+    let result = fn();
+    lastResult = result;
+    isCalculated = true;
+    return result;
+  }
+}
+
+```
+</details>
+
+<details>
+	<summary><b>22. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
 	<summary><b>21. Шаблон</b></summary>
 	
 ```js
