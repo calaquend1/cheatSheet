@@ -1028,3 +1028,26 @@ export default function euclideanAlgorithm(originalA, originalB) {
 	
 ```
 </details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
