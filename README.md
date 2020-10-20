@@ -1055,10 +1055,29 @@ export default function isPowerOfTwoBitwise(number) {
 </details>
 
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>26. Количество индексов строк, в которых элементы разные</b></summary>
 	
 ```js
-	
+	/**
+ * @param {string} a
+ * @param {string} b
+ * @return {number}
+ */
+export default function hammingDistance(a, b) {
+  if (a.length !== b.length) {
+    throw new Error('Strings must be of the same length');
+  }
+
+  let distance = 0;
+
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] !== b[i]) {
+      distance += 1;
+    }
+  }
+
+  return distance;
+}
 ```
 </details>
 
