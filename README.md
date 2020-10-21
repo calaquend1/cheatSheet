@@ -1151,3 +1151,66 @@ export default function btPowerSet(originalSet) {
 	
 ```
 </details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>21. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
