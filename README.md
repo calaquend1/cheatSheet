@@ -1294,42 +1294,42 @@ export default function combinationSum(candidates, target) {
 ```
 </details>
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>34. Шаблон</b></summary>
 	
 ```js
 	
 ```
 </details>
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>35. Шаблон</b></summary>
 	
 ```js
 	
 ```
 </details>
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>36. Шаблон</b></summary>
 	
 ```js
 	
 ```
 </details>
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>37. Шаблон</b></summary>
 	
 ```js
 	
 ```
 </details>
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>38. Шаблон</b></summary>
 	
 ```js
 	
 ```
 </details>
 <details>
-	<summary><b>21. Шаблон</b></summary>
+	<summary><b>39. Шаблон</b></summary>
 	
 ```js
 	
