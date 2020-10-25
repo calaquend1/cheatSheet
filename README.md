@@ -1266,10 +1266,10 @@ export default function combinationSum(candidates, target) {
 ```
 </details>
 <details>
-	<summary><b>30. Шаблон</b></summary>
+	<summary><b>30. html progress bar</b></summary>
 	
 ```js
-	
+	<progress max="100" value="66"></progress>
 ```
 </details>
 <details>
