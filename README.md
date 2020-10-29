@@ -1469,3 +1469,10 @@ export default function knightTour(chessboardSize) {
 	
 ```
 </details>
+<details>
+	<summary><b>40. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
