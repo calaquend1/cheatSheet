@@ -1588,56 +1588,7 @@ export default function longestCommonSubstring(string1, string2) {
 ```
 </details>
 <details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
-<details>
-	<summary><b>40. Шаблон</b></summary>
+	<summary><b>41. Шаблон</b></summary>
 	
 ```js
 	
@@ -1651,7 +1602,56 @@ export default function longestCommonSubstring(string1, string2) {
 ```
 </details>
 <details>
-	<summary><b>41. Шаблон</b></summary>
+	<summary><b>43. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>44. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>45. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>46. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>47. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>48. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>49. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+<details>
+	<summary><b>50. Шаблон</b></summary>
 	
 ```js
 	
