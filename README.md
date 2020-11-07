@@ -1657,3 +1657,31 @@ export default function longestCommonSubstring(string1, string2) {
 	
 ```
 </details>
+
+<details>
+	<summary><b>49. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>49. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+<details>
+	<summary><b>49. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+
+
+
