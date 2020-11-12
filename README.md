@@ -1546,7 +1546,7 @@ export default function longestCommonSubstring(string1, string2) {
 ```
 </details>
 <details>
-	<summary><b>35. Шаблон</b></summary>
+	<summary><b>35. longestCommonSubsequence</b></summary>
 	
 ```js
 	/**
@@ -1612,10 +1612,35 @@ export default function longestCommonSubsequence(set1, set2) {
 ```
 </details>
 <details>
-	<summary><b>36. Шаблон</b></summary>
+	<summary><b>36. from</b></summary>
 	
 ```js
-	
+	const from = fromNumber => ({
+		to: toNumber => ({
+			by: stepNumber => ({
+				[Symbol.iterator]: () => ({
+					next: () => {
+						const returnValue = {
+							value: fromNumber,
+							done: fromNumber >= toNumber,
+						};
+						fromNumber = fromNumber + stepNumber;
+						return returnValue
+					}
+				})
+			})
+		}),
+		[Symbol.iterator]: () => ({
+			next: () => {
+				const returnValue = {
+					value: fromNumber,
+					done: fromNumber >= toNumber,
+				};
+				fromNumber++;
+				return returnValue;
+			}
+		})
+	});
 ```
 </details>
 <details>
