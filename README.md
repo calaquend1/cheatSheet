@@ -1743,7 +1743,7 @@ export default function longestCommonSubsequence(set1, set2) {
 </details>
 
 <details>
-	<summary><b>49. Шаблон</b></summary>
+	<summary><b>51.  Шаблон</b></summary>
 	
 ```js
 	
@@ -1751,7 +1751,7 @@ export default function longestCommonSubsequence(set1, set2) {
 </details>
 
 <details>
-	<summary><b>49. Шаблон</b></summary>
+	<summary><b>52. Шаблон</b></summary>
 	
 ```js
 	
