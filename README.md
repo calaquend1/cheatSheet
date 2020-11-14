@@ -1644,10 +1644,13 @@ export default function longestCommonSubsequence(set1, set2) {
 ```
 </details>
 <details>
-	<summary><b>37. Шаблон</b></summary>
+	<summary><b>37. Определение ОС (define OS)</b></summary>
 	
 ```js
-	
+	if (navigator.appVersion.indexOf("Win") != -1) os = "Windows";
+if (navigator.appVersion.indexOf("Mac") != -1) os = "MacOS";
+if (navigator.appVersion.indexOf("X11") != -1) os = "UNIX";
+if (navigator.appVersion.indexOf("Linux") != -1) os = "Linux";
 ```
 </details>
 <details>
