@@ -1654,10 +1654,62 @@ if (navigator.appVersion.indexOf("Linux") != -1) os = "Linux";
 ```
 </details>
 <details>
-	<summary><b>38. Шаблон</b></summary>
+	<summary><b>38. Competitive programming task</b></summary>
+	https://www.youtube.com/watch?v=PIeiiceWe_w
 	
 ```js
-	
+	const setupObject = {
+  2:'abc',
+  3:'def',
+  4:'ghi',
+  5:'jkl',
+  6:'mno',
+  7:'pqrs',
+  8:'tuv',
+  9:'wxyz',
+}
+const letterObject = {
+  a:'abc',
+  b:'abc',
+  c:'abc',
+  d:'def',
+  e:'def',
+  f:'def', 
+  g:'ghi', 
+  h:'ghi', 
+  i:'ghi', 
+  j:'jkl', 
+  k:'jkl', 
+  l:'jkl', 
+  m:'mno', 
+  n:'mno', 
+  o:'mno', 
+  p:'pqrs', 
+  q:'pqrs', 
+  r:'pqrs', 
+  s:'pqrs', 
+  t:'tuv', 
+  u:'tuv', 
+  v:'tuv', 
+  w:'wxyz', 
+  x:'wxyz', 
+  y:'wxyz', 
+  z:'wxyz',
+}
+const phone1 = '9234567'
+const list1 = ['wbegknq','xadgjmp','ycfilos', 'wbe', 'adg', '', 'aw']
+const transformPhone = (phone) => {
+  return [...phone].map(digit => setupObject[digit]).join('')
+} // O(n)
+const transformList = (list) => {
+	return list.map(item => [...item].map(letter => letterObject[letter]).join(''))
+}
+const phoneNumber = (phone, list) => {
+  const newPhone = transformPhone(phone)
+  const newList = transformList(list)
+	return newList.filter((item, index) => newPhone.includes(item) && (list[index] || list[index] === '' ))
+}
+console.log(phoneNumber(phone1, list1))
 ```
 </details>
 <details>
