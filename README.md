@@ -1658,7 +1658,8 @@ if (navigator.appVersion.indexOf("Linux") != -1) os = "Linux";
 	https://www.youtube.com/watch?v=PIeiiceWe_w
 	
 ```js
-	const setupObject = {
+
+const setupObject = {
   2:'abc',
   3:'def',
   4:'ghi',
@@ -1696,19 +1697,23 @@ const letterObject = {
   y:'wxyz', 
   z:'wxyz',
 }
+
 const phone1 = '9234567'
 const list1 = ['wbegknq','xadgjmp','ycfilos', 'wbe', 'adg', '', 'aw']
 const transformPhone = (phone) => {
   return [...phone].map(digit => setupObject[digit]).join('')
 } // O(n)
+
 const transformList = (list) => {
 	return list.map(item => [...item].map(letter => letterObject[letter]).join(''))
 }
+
 const phoneNumber = (phone, list) => {
   const newPhone = transformPhone(phone)
   const newList = transformList(list)
-	return newList.filter((item, index) => newPhone.includes(item) && (list[index] || list[index] === '' ))
+  return newList.filter((item, index) => newPhone.includes(item) && (list[index] || list[index] === '' ))
 }
+
 console.log(phoneNumber(phone1, list1))
 ```
 </details>
