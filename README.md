@@ -1819,7 +1819,7 @@ console.log(phoneNumber(phone1, list1))
 </details>
 
 <details>
-	<summary><b>49. Шаблон</b></summary>
+	<summary><b>53. Шаблон</b></summary>
 	
 ```js
 	
