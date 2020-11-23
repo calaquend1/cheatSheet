@@ -1749,10 +1749,21 @@ var searchRange = function(nums, target) {
 ```
 </details>
 <details>
-	<summary><b>40. Шаблон</b></summary>
+	<summary><b>40. linked list</b></summary>
 	
 ```js
-	
+export default class LinkedListNode {
+  constructor(value, next = null) {
+    this.value = value;
+    this.next = next;
+  }
+
+  toString(callback) {
+    return callback ? callback(this.value) : `${this.value}`;
+  }
+}
+
+
 ```
 </details>
 <details>
