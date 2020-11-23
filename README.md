@@ -1718,10 +1718,34 @@ console.log(phoneNumber(phone1, list1))
 ```
 </details>
 <details>
-	<summary><b>39. Шаблон</b></summary>
+	<summary><b>39. Leetcode find-first-and-last-position-of-element-in-sorted-array</b></summary>
 	
 ```js
-	
+	var first_pos = (a, x) => {
+    let n = a.length
+    let first_p = n
+    let low = 0
+    let high = n - 1
+    while(low <= high) {
+        let mid = Math.round((high + low) / 2);
+        if (a[mid] >= x){
+            first_p = mid;
+            high = mid - 1;
+        } else { 
+            low = mid + 1;
+        }
+    }
+    return first_p
+}
+
+var searchRange = function(nums, target) {
+   let first = first_pos(nums, target);
+   let last = first_pos(nums, target + 1) - 1;
+   if(first <= last) {
+    return [first, last];
+   }
+   return [-1, -1];
+};
 ```
 </details>
 <details>
