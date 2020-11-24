@@ -1791,10 +1791,40 @@ function reverse(head) {
 ```
 </details>
 <details>
-	<summary><b>41. Шаблон</b></summary>
+	<summary><b>41. Function/Prototype interview questions</b></summary>
 	
 ```js
+	const fn = () => {};
+	console.log(typeof fn); // function
 	
+	
+'use strict';
+const user = {
+  id: 551,
+  name: 'Tom',
+  getId() {
+    return this.id;
+  },
+  credentials: {
+    id: 120,
+    username: 'tom',
+    getId() {
+      return this.id;
+    }
+  },
+};
+
+const getId = user.credentials.getId;
+console.log(getId()); // TypeError: Cannot read property 'id' of undefined
+// without strict: undefined
+
+function hello() {
+  setTimeout(function() {
+    console.log(this.name);
+  }, 100);
+}
+hello.call({name: 'tom'}); // undefined
+
 ```
 </details>
 <details>
