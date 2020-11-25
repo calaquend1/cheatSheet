@@ -1828,10 +1828,22 @@ hello.call({name: 'tom'}); // undefined
 ```
 </details>
 <details>
-	<summary><b>42. Шаблон</b></summary>
+	<summary><b>42. Two sum</b></summary>
 	
 ```js
-	
+	var twoSum = function(nums, target) {
+  numsIndexes = {};
+
+  for (let i = 0; i < nums.length; i += 1) {
+    let currentDifference = target - nums[i];
+
+    if (numsIndexes[currentDifference] !== undefined && numsIndexes[currentDifference] !== i) {
+      return [i, numsIndexes[currentDifference]];
+    } else {
+      numsIndexes[nums[i]] = i;
+    }
+  }
+};
 ```
 </details>
 <details>
