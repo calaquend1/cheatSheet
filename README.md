@@ -1847,10 +1847,29 @@ hello.call({name: 'tom'}); // undefined
 ```
 </details>
 <details>
-	<summary><b>43. Шаблон</b></summary>
+	<summary><b>43. sum(1)(2)(3)</b></summary>
 	
 ```js
-	
+	function sum(x = 0) {
+  let tempSum = x
+  if (arguments.length > 1) {
+    tempSum = [...arguments].reduce((a,b) => a + b, 0);
+  }
+  const f = (b) => {
+    tempSum += b;
+    return f;
+  }
+  f.toString = function(){
+    return tempSum
+  }
+  return f
+}
+
+console.log(sum(1,2)(2)(3))
+console.log(sum(3)(4))
+console.log(sum(5)(1))
+console.log(sum(5,6))
+console.log(sum())
 ```
 </details>
 <details>
