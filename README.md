@@ -1975,4 +1975,31 @@ console.log(sum())
 </details>
 
 
+<details>
+	<summary><b>53. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+
+<details>
+	<summary><b>53. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
+
+
+<details>
+	<summary><b>53. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
+
 
