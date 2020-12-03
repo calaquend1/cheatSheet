@@ -2906,7 +2906,7 @@ export class TimSort{
 
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>54. Шаблон</b></summary>
 	
 ```js
 	
@@ -2915,7 +2915,7 @@ export class TimSort{
 
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>55. Шаблон</b></summary>
 	
 ```js
 	
@@ -2924,7 +2924,7 @@ export class TimSort{
 
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>56. Шаблон</b></summary>
 	
 ```js
 	
@@ -2933,7 +2933,7 @@ export class TimSort{
 
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>57. Шаблон</b></summary>
 	
 ```js
 	
@@ -2942,7 +2942,7 @@ export class TimSort{
 
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>58. Шаблон</b></summary>
 	
 ```js
 	
@@ -2952,7 +2952,7 @@ export class TimSort{
 
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>59. Шаблон</b></summary>
 	
 ```js
 	
@@ -2960,7 +2960,7 @@ export class TimSort{
 </details>
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>60. Шаблон</b></summary>
 	
 ```js
 	
@@ -2968,7 +2968,7 @@ export class TimSort{
 </details>
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>61. Шаблон</b></summary>
 	
 ```js
 	
@@ -2976,7 +2976,7 @@ export class TimSort{
 </details>
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>62. Шаблон</b></summary>
 	
 ```js
 	
@@ -2984,7 +2984,7 @@ export class TimSort{
 </details>
 
 <details>
-	<summary><b>53. Шаблон</b></summary>
+	<summary><b>63. Шаблон</b></summary>
 	
 ```js
 	
