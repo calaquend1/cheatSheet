@@ -2990,3 +2990,11 @@ export class TimSort{
 	
 ```
 </details>
+
+<details>
+	<summary><b>64. Шаблон</b></summary>
+	
+```js
+	
+```
+</details>
