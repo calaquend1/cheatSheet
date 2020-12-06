@@ -2852,10 +2852,20 @@ export class TimSort{
 ```
 </details>
 <details>
-	<summary><b>47. Шаблон</b></summary>
+	<summary><b>47. closure</b></summary>
 	
 ```js
-	
+	function handleLikePost(step) {
+  let likeCount = 0;
+  return function addLike() {
+    likeCount += step;
+    return likeCount;
+  };
+}
+const doubleLike = handleLikePost(2);
+console.log(doubleLike()); // 2
+console.log(doubleLike()); // 4
+console.log(doubleLike()); // 6
 ```
 </details>
 <details>
