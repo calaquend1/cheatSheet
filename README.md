@@ -3128,11 +3128,4 @@ export default function regularExpressionMatching(string, pattern) {
 ```
 </details>
 
-<details>
-	<summary><b>63. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
 
