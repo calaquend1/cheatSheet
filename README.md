@@ -3057,12 +3057,3 @@ export default function regularExpressionMatching(string, pattern) {
 	
 ```
 </details>
-
-
-<details>
-	<summary><b>55. Шаблон</b></summary>
-	
-```js
-	
-```
-</details>
