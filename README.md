@@ -161,6 +161,7 @@ function executeSequentially(f) {
     x.push(result)
   });
 console.log(x)
+
 return result;
 }
 
