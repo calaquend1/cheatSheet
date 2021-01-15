@@ -1325,7 +1325,6 @@ function getPossibleMoves(chessboard, position) {
     [position[0] + 1, position[1] + 2],
     [position[0] + 2, position[1] + 1],
   ];
-
   // Filter out all moves that go beyond the board.
   return possibleMoves.filter((move) => {
     const boardSize = chessboard.length;
