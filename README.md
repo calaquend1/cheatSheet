@@ -1478,6 +1478,7 @@ export default function dpRainTerraces(terraces) {
 	<summary><b>34. longestCommonSubstring</b></summary>
 	
 ```js
+
 	/**
  * @param {string} string1
  * @param {string} string2
