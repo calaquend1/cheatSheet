@@ -3,7 +3,6 @@
  <summary><b>1. Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.</b></summary>
   
 ```js 
-
 function find_optimized(task) { 
   var results=[] 
   var new_tasks=[] 
@@ -32,6 +31,7 @@ console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
 
 <details>
  <summary><b>2. Throttle function: не даёт запускать функцию чаще, чем нужно.</b></summary>
+
 
 ```js
 function throttle(func, ms) { 
