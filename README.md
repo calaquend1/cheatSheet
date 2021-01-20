@@ -29,6 +29,8 @@ console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
 ```
 </details>
 
+
+
 <details>
  <summary><b>2. Throttle function: не даёт запускать функцию чаще, чем нужно.</b></summary>
 
