@@ -4,6 +4,7 @@
 
 ```js 
 function find_optimized(task) { 
+
   var results = [] 
   var new_tasks = [] 
   for(i in task.ar){ 
@@ -24,14 +25,13 @@ function find_optimized(task) {
   return ((results.length==0) ? task.prev:(task.prev==undefined ? results:[task.prev, results])); 
 } 
 
-console.log(find_optimized({sum: 26, ar: [7, 10, 2, 5, 3, 1]}))
+console.log(find_optimized({sum: 25, ar: [7, 10, 2, 5, 3, 1]}))
 ```
+
 </details>
 
-
-
 <details>
- <summary><b>2. Throttle function: не даёт запускать функцию чаще, чем нужно.</b></summary>
+ <summary><b>2. Throttle function: функция не даёт запускать функцию чаще, чем нужно.</b></summary>
 
 
 ```js
