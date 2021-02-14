@@ -667,7 +667,7 @@ let findShortestPath = (graph, startNode, endNode) => {
        } else {
           // save the distance from the start node to the child node
           let newdistance = distance + children[child];
-// if there's no recorded distance from the start node to the child node in the distances object
+// if there is no recorded distance from the start node to the child node in the distances object
 // or if the recorded distance is shorter than the previously stored distance from the start node to the child node
           if (!distances[child] || distances[child] > newdistance) {
 // save the distance to the object
