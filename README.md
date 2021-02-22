@@ -4,6 +4,7 @@
 
 ```js 
 function find_optimized(task) { 
+
   let results = [] 
   let new_tasks = [] 
   for(i in task.ar) { 
