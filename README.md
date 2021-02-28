@@ -3,6 +3,7 @@
  <summary><b>1. Функция, которая ищет все комбинации чисел, которые составляет искомую сумму.</b></summary>
 
 ```js 
+
 function find_optimized(task) { 
 
   let results = [] 
