@@ -24,7 +24,6 @@ function find_optimized(task) {
 // Если не на вершине стека - вернём предыдущий элемент цепочки. Если что-то нашли - вернём ещё и массив результатов. 
   return ((results.length==0) ? task.prev:(task.prev==undefined ? results:[task.prev, results])); 
 } 
-
 console.log(find_optimized({sum: 25, ar: [7, 10, 2, 5, 3, 1]}))
 ```
 
