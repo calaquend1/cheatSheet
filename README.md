@@ -3016,7 +3016,15 @@ export default function regularExpressionMatching(string, pattern) {
 
 <details>
  <summary><b>50</b></summary>
+	```js
+	function multiply(a) {
+	  return function(b) {
+	    return a * b;
+	  }
+	}
 
+	multiply(5)(6);
+	```
 </details>
 
 </details>
