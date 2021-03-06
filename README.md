@@ -6,7 +6,7 @@
 
 function find_optimized(task) { 
 
-  let results = [] 
+  var results = [] 
   let new_tasks = [] 
   for(i in task.ar) { 
     if(task.sum==task.ar[i]){ // Нашли элемент = требуемой сумме? Это будет концом цепочки. 
