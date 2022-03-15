@@ -3015,8 +3015,8 @@ export default function regularExpressionMatching(string, pattern) {
 
 
 <details>
- <summary><b>50</b></summary>
-	```js
+ <summary><b>49</b></summary>
+```js
 	function multiply(a) {
 	  return function(b) {
 	    return a * b;
@@ -3024,66 +3024,71 @@ export default function regularExpressionMatching(string, pattern) {
 	}
 
 	multiply(5)(6);
-	```
-</details>
-
-</details>
-
-</details>
-<details>
- <summary><b>50</b></summary>
-
-</details>
-
-</details>
-
-</details>
-<details>
- <summary><b>50</b></summary>
-
-</details>
-
-</details>
-
-</details></details>
-<details>
- <summary><b>50</b></summary>
-
-</details>
-
-</details>
-
-</details></details>
-<details>
- <summary><b>50</b></summary>
-
-</details>
-
-</details>
-
+```
 </details>
 
 <details>
  <summary><b>50</b></summary>
+	```js
+const solution = (arr, k) => {
+  let index = 0;
+  let j = 0;
+  while (arr.length !== 1) {
+    j++;
+    if (j === k) {
+      arr = [...arr.slice(0, index), ...arr.slice(index+1)]; // deleted an element
+      j = 0;
+      index--;
+    }
+    index++;
+    if (index >= arr.length) {
+      index = 0;
+    }
+  }
+  return arr[0];
+};
+function ListNode(val, next) {
+      this.val = (val===undefined ? 0 : val)
+      this.next = (next===undefined ? null : next)
+}
 
+const solution1 = (arr, k) => {
+  if (k === 1) return arr[arr.length - 1]
+  if (arr.length === 1) return arr[0];
+  if (arr.length === 2) return k % 2 === 0 ? arr[1] : arr[0];
+  let head = new ListNode(arr[0]);
+  let current = new ListNode(arr[1]);
+  head.next = current;
+  for (let i = 2; i < arr.length; i++) {
+    current.next = new ListNode(arr[i]);
+    current = current.next;
+  }
+  current.next = head;
+  current = head;
+  let prev = null;
+  let counter = 0;
+  let deleted = 0;
+
+  while (deleted !== arr.length - 1) {
+    counter++;
+    if (counter === k) {
+      prev.next = current.next;
+      current = current.next;
+      counter = 0;
+      deleted++;
+    } else {
+      prev = current;
+      current = current.next;
+    }
+  }
+  return current;
+};
+
+const arr = [{arr: [1,2,3,4,5,6], k: 3},  {arr: [1,2,3,4,5], k: 1}, {arr: [1,2,3,4,5,6,7,8,9], k: 2}]
+// {arr: [1,2,3,4,5,6,7,8,9], k: 2}
+for (let i = 0; i < arr.length; i++) {
+  console.log(solution(arr[i].arr, arr[i].k), solution1(arr[i].arr, arr[i].k))
+}
+```
 </details>
-
-</details>
-</details>
-
-<details>
- <summary><b>50</b></summary>
-
-</details>
-
-</details></details>
-
-<details>
- <summary><b>50</b></summary>
-
-</details>
-
-</details></details>
-
-
 
